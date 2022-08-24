@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Admin Dashboard</title>
+</head>
+  <body>
+    
+    <!-- Navbar-->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+        <a class="navbar-brand" href="#">
+            <h1 class="text-primary"> <span class="text-success">Eat</span>great</h1>
+        </a>
+        </div>
+        <div>
+        <a href="/" class=" btn btn-primary mr-8">Home</a>
+        <a href="/logout" class="btn btn-danger">Logout</a>
+        </div>
+    </nav>
+    <!-- Orders table -->
+
+    <h1>Orders:</h1>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Order id</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Menu id</th>
+            <th scope="col">Client Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Delivery Address</th>
+            <th scope="col">Date</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for order in all_orders %}
+            <tr>
+                <th scope="row">{{order.id}}</th>
+                <td>${{order.amount}}</td>
+                <td>{{order.menu_id}}</td>
+                <td>{{order.customer.first_name}} {{order.customer.last_name}}</td>
+                <td>{{order.customer.phone}}</td>
+                <td>{{order.customer.address}}</td>
+                <td>{{order.created_at}}</td>
+                <td>{{order.status}}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+        
+      </table>
+
+      <h1>Revenue:  ${{revenue}}</h1>
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
