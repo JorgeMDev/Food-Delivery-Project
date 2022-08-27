@@ -83,8 +83,9 @@ def dashboard():
         return 'YOU ARE NOT A ADMIN'
     all_orders = Order.get_all()
     revenue = Order.sum_amount()
+    pending_orders = Order.pending_orders()
 
-    return render_template('admin_dashboard.html', all_orders = all_orders, revenue = revenue)
+    return render_template('admin_dashboard.html', all_orders = all_orders, revenue = revenue, pending_orders = pending_orders)
 
 
 

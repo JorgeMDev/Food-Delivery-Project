@@ -47,7 +47,7 @@ class Order:
 
     @classmethod
     def update(cls,data):
-        query = "UPDATE orders SET description = %(description)s, status = %(status)s, amount = %(amount)s, created_at = %(created_at)s WHERE id = %(id)s"
+        query = "UPDATE orders SET status = %(status)s WHERE id = %(id)s"
         result = connectToMySQL(DATABASE).query_db(query,data)
         return result
 
@@ -61,7 +61,6 @@ class Order:
     def get_by_id(cls,data):
         query = "SELECT * FROM orders JOIN users ON users.id = orders.user_id WHERE orders.id = %(id)s;"
         result = connectToMySQL(DATABASE).query_db(query,data)
-       
         row = result[0]
         this_order = cls(row)
         user_data = {
@@ -80,6 +79,14 @@ class Order:
         result = connectToMySQL(DATABASE).query_db(query)
         print(result)
         return result[0]['SUM(amount)'] 
+    
+    @classmethod
+    def pending_orders(cls):
+        query  = "SELECT COUNT(id) FROM orders WHERE status = 'pending';"
+        result = connectToMySQL(DATABASE).query_db(query)
+        print(result)
+        return result[0]['COUNT(id)'] 
+
 
 
     @staticmethod

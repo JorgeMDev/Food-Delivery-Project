@@ -69,3 +69,25 @@ def message():
     if not 'user_id' in session: 
         return redirect('/')
     return render_template('message.html')
+
+#UPDATE ORDER
+@app.route('/update/<int:id>/order')
+def update(id):
+    data = {
+        'id':id,
+        'status':'Delivered'
+    }
+
+    Order.update(data)
+    return redirect('/admin/dashboard')
+
+#CANCEL ORDER
+@app.route('/delete/<int:id>/order')
+def cancel(id):
+    data = {
+        'id':id,
+        'status':'Cancelled'
+    }
+
+    Order.update(data)
+    return redirect('/admin/dashboard')
