@@ -19,8 +19,7 @@
         <div>
         <a href="/" class=" btn btn-primary mr-8">Home</a>
         <a href="/logout" class="btn btn-danger">Logout</a>
-        </div>
-        
+        </div>           
         </nav>
         {% for message in get_flashed_messages(category_filter=['ord']) %}     <!-- declare a variable called messages -->
         <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
