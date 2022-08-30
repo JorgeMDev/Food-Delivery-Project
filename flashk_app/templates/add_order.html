@@ -24,7 +24,7 @@
         {% for message in get_flashed_messages(category_filter=['ord']) %}     <!-- declare a variable called messages -->
         <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
     {% endfor %}
-
+        <h1 class="text-center">Place you order</h1>
     <!-- Check out form -->
     <div class="w-50 p-3 mx-auto">
     <form action="/order/placed" method="POST">

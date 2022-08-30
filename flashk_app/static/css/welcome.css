@@ -1,0 +1,19 @@
+.shadow {
+    box-shadow: 5px 10px #888888
+}
+
+.menuweek {
+    margin-top: 5%;
+    text-align: center;
+    border: 1px solid black;
+    padding: 2%;
+}
+
+.text-color {
+    color: #3A5311;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+

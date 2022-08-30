@@ -49,3 +49,22 @@ body {
     height: 100px;
     background-color: #3A5311;
 }
+
+.list {
+    list-style: none;
+    gap: 2%;
+    width: 150%;
+    align-items: center;
+
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+}
+
+li:hover {
+    color: #3A5311;
+    font-weight: 600;
+    cursor: pointer;
+}

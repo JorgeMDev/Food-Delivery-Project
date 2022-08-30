@@ -25,7 +25,7 @@
   <!-- Title-->
 
     <h1 class="text-right"> Welcome {{user_by_id.first_name}}  {{user_by_id.last_name}}</h1>
-    <h1>Menu of the week!  Price: $59.99</h1>
+    <h1 class="menuweek shadow">Menu of the week!  Price: <span class="text-color">$59.99</span></h1>
 
     <div class="d-flex justify-content-around">
         <h4>Lunch Menu:</h4>
@@ -53,12 +53,12 @@
 
     <div class="d-flex justify-content-center flex-wrap">
     <!--Monday-->
-    <div class="card m-3" style="width: 18rem;">
+    <div class="card m-3 " style="width: 18rem;">
         <img class="card-img-top" src="{{one_menu.monday_url}}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Monday</h5>
           <p class="card-text">{{one_menu.monday}}</p>
-          <a href="#" class="btn btn-primary">See Recipe</a>
+          <!-- <a href="#" class="btn btn-primary">See Recipe</a> -->
         </div>
       </div>
     
@@ -68,7 +68,7 @@
         <div class="card-body">
           <h5 class="card-title">Tuesday</h5>
           <p class="card-text">{{one_menu.tuesday}}</p>
-          <a href="#" class="btn btn-primary">See recipe</a>
+          <!-- <a href="#" class="btn btn-primary">See recipe</a> -->
         </div>
       </div>
       
@@ -78,7 +78,7 @@
         <div class="card-body">
           <h5 class="card-title">Wednesday</h5>
           <p class="card-text">{{one_menu.wednesday}}</p>
-          <a href="#" class="btn btn-primary">See recipe</a>
+          <!-- <a href="#" class="btn btn-primary">See recipe</a> -->
         </div>
       </div>
 
@@ -88,7 +88,7 @@
         <div class="card-body">
           <h5 class="card-title">Thursday</h5>
           <p class="card-text">{{one_menu.thursday}}</p>
-          <a href="#" class="btn btn-primary">See recipe</a>
+          <!-- <a href="#" class="btn btn-primary">See recipe</a> -->
         </div>
       </div>
       
@@ -98,7 +98,7 @@
         <div class="card-body">
           <h5 class="card-title">Friday</h5>
           <p class="card-text">{{one_menu.friday}}</p>
-          <a href="#" class="btn btn-primary">See recipe</a>
+          <!-- <a href="#" class="btn btn-primary">See recipe</a> -->
         </div>
       </div>
     
@@ -108,7 +108,7 @@
         <div class="card-body">
           <h5 class="card-title">Saturday</h5>
           <p class="card-text">{{one_menu.saturday}}</p>
-          <a href="#" class="btn btn-primary">See recipe</a>
+          <!-- <a href="#" class="btn btn-primary">See recipe</a> -->
         </div>
       </div>
    </div>
