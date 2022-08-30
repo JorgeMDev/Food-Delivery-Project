@@ -76,7 +76,7 @@ def update(id):
     data = {
         'id':id,
         'status':'Delivered'
-    }
+     }
 
     Order.update(data)
     return redirect('/admin/dashboard')
